@@ -24,10 +24,13 @@
                     <td>
                         <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info">Xem</a>
                         <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-warning">Sửa</a>
-                        <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" style="display: inline-block;">
+                        <form action="{{ route('tasks.destroy', $task->id) }}" method="POST"
+                              style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+                            <button type="submit" class="btn btn-danger"
+                                    onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa
+                            </button>
                         </form>
                     </td>
                 </tr>
@@ -35,5 +38,7 @@
             </tbody>
         </table>
     </div>
+
 @endsection
+
 
